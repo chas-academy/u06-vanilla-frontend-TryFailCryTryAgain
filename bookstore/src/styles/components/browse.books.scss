@@ -1,0 +1,11 @@
+@import '../variables/variables.scss';
+
+.browse_books {
+    background-color: $dark_blue;
+    border-radius: 5px;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    color: $white;
+    padding: 12px 24px;
+}

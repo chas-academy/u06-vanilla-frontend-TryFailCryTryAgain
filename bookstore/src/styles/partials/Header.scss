@@ -1,0 +1,70 @@
+@import '../variables/variables.scss';
+
+header {
+    height: 100px;
+    width: 100wv;
+    background-color: $dark_blue;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    z-index: 1;
+
+    .store_title {
+        font-size: 2rem;
+    }
+
+    .navbar_links {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.5rem;
+        position: relative;
+
+        li {
+            margin: 0 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        li:hover {
+            color: $cyan;
+        }
+    }
+}
+
+.book_dropdown_menu {
+    position: absolute;
+    top: 100%; // Position directly below the parent
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $dark_blue;
+    text-transform: uppercase;
+    color: $white;
+    width: 150px;
+    padding: 20px 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 20px;
+        font-size: 1.25rem;
+        text-align: center;
+        padding: 5px 0;
+        
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+// Specific styling for small components
+@use './components/browse.books.scss';
+
+// Page styling for overarching layout
+@use './pages/Homepage.scss';
+
+// Variable setup
+@use './variables/variables.scss';
+
+// Reset file, removes any unwanted styling that comes with the browser
+@use './reset/reset.scss';
+
+// Partials
+@use './partials/Header.scss';
+@use './partials/Footer.scss';
+
+// Containers
+@use './containers/homepage.welcome.section.scss';

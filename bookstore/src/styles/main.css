@@ -1,0 +1,264 @@
+.browse_books {
+  background-color: #010727;
+  border-radius: 5px;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  color: #FAFAFA;
+  padding: 12px 24px;
+}
+
+.homepage_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ==========================================================================
+   RESET STYLES
+   ========================================================================== */
+/**
+ * A modern reset based on:
+ * - Andy Bell's modern CSS reset: https://piccalil.li/blog/a-modern-css-reset/
+ * - Meyer's reset: https://meyerweb.com/eric/tools/css/reset/
+ * - Tailwind's preflight: https://tailwindcss.com/docs/preflight
+ * - Normalize.css: https://necolas.github.io/normalize.css/
+ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Remove default table spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset form elements */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default textarea resize */
+textarea {
+  resize: none;
+}
+
+/* Remove outline for non-keyboard users */
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+/* Remove default anchor styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hidden attribute */
+[hidden] {
+  display: none !important;
+}
+
+header {
+  height: 100px;
+  width: 100wv;
+  background-color: #010727;
+  color: #FAFAFA;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  z-index: 1;
+}
+header .store_title {
+  font-size: 2rem;
+}
+header .navbar_links {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  position: relative;
+}
+header .navbar_links li {
+  margin: 0 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+header .navbar_links li:hover {
+  color: #00ccff;
+}
+
+.book_dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #010727;
+  text-transform: uppercase;
+  color: #FAFAFA;
+  width: 150px;
+  padding: 20px 0;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.book_dropdown_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.book_dropdown_menu li {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 5px 0;
+}
+.book_dropdown_menu li:hover {
+  color: #00ccff;
+  cursor: pointer;
+}
+.book_dropdown_menu li:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: #010727;
+  height: 50px;
+  width: 100vw;
+  text-align: left;
+  padding: 0 20px;
+  color: #FAFAFA;
+  display: flex;
+  align-items: center;
+}
+
+.upper_section {
+  background-color: #D3DAFF;
+  height: 400px;
+  width: 95vw;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.upper_section h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.upper_section h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.under_section {
+  margin-top: 20px;
+}
+.under_section .featured_books_container {
+  display: flex;
+  width: 95vw;
+  justify-content: center;
+}
+.under_section .featured_books_container .featured_book_card_container {
+  height: 100px;
+  width: 250px;
+  background-color: #FAFAFA;
+  box-shadow: 1px 0px 50px 10px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}/*# sourceMappingURL=main.css.map */

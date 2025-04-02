@@ -1,0 +1,45 @@
+@import '../variables/variables.scss';
+
+.upper_section {
+    background-color: $light_pink;
+    height: 400px;
+    width: 95vw;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+}
+
+.under_section {
+    margin-top: 20px;
+
+    .featured_books_container {
+        display: flex;
+        width: 95vw;
+        justify-content: center;
+
+        .featured_book_card_container {
+            height: 100px;
+            width: 250px;
+            background-color: $white;
+            box-shadow: 1px 0px 50px 10px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+        }
+    }
+}
