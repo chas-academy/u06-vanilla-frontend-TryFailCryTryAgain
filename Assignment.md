@@ -11,3 +11,7 @@
 - And remember, KISS, DRY
 
 # Start with a simple Figma Skiss
+
+
+
+!NOTE, use a DOM manipulation approach to this project
