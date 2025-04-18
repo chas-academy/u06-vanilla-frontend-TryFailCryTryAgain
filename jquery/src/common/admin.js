@@ -48,9 +48,6 @@ $(document).ready(function() {
             });
     }
 
-    
-
-
     function fetchBooks() {
         $.get(bookUrl)
             .done(function(data) {
@@ -428,6 +425,10 @@ $(document).ready(function() {
                 `;
 
                 $('#create_form').append(editOrderHtml);
+                
+                $(document).off('click', '#cancel_edit').on('click', '#cancel_edit', function() {
+                    $('.create_form_background').css("display", "none");
+                });
 
                 $(document).off('click', '#confirm_edit').on('click', '#confirm_edit', function() {
                     // Get the selected user
@@ -466,10 +467,8 @@ $(document).ready(function() {
                             console.log("Order updated successfully:", response);
                             alert("Order updated successfully!");
                             
-                            // Hide the edit form
                             $('.create_form_background').css("display", "none");
                             
-                            // Refresh the orders list
                             fetchOrders();
                         },
                         error: function(xhr, status, error) {
@@ -484,7 +483,6 @@ $(document).ready(function() {
                             alert(errorMessage);
                         },
                         complete: function() {
-                            // Reset button state
                             $('#confirm_edit').prop('disabled', false).text('Confirm');
                         }
                     });
@@ -557,14 +555,11 @@ $(document).ready(function() {
     
                 $('#create_form').append(editUserHtml);
     
-                // Cancel button handler
                 $(document).off('click', '#cancel_edit').on('click', '#cancel_edit', function() {
                     $('.create_form_background').css("display", "none");
                 });
     
-                // Confirm button handler
                 $(document).off('click', '#confirm_edit').on('click', '#confirm_edit', function() {
-                    // Collect form data
                     const updateData = {
                         first_name: $('#first_name').val(),
                         last_name: $('#last_name').val(),
@@ -574,20 +569,17 @@ $(document).ready(function() {
                         ZIP: $('#zip').val()
                     };
     
-                    // Only update password if a new one was provided
                     const newPassword = $('#password').val();
                     if (newPassword) {
                         updateData.password = newPassword;
                     }
     
-                    // Validate required fields
                     if (!updateData.first_name || !updateData.last_name || !updateData.phone || 
                         !updateData.email || !updateData.adress || !updateData.ZIP) {
                         alert("Please fill in all required fields");
                         return;
                     }
     
-                    // Show loading state
                     $(this).prop('disabled', true).text('Updating...');
     
                     $.ajax({
@@ -599,10 +591,8 @@ $(document).ready(function() {
                             console.log("User updated successfully:", response);
                             alert("User updated successfully!");
                             
-                            // Hide the edit form
                             $('.create_form_background').css("display", "none");
                             
-                            // Refresh the users list
                             fetchUsers();
                         },
                         error: function(xhr, status, error) {
@@ -617,7 +607,6 @@ $(document).ready(function() {
                             alert(errorMessage);
                         },
                         complete: function() {
-                            // Reset button state
                             $('#confirm_edit').prop('disabled', false).text('Confirm');
                         }
                     });
@@ -640,7 +629,6 @@ $(document).ready(function() {
                 $("#create_form").empty();
                 $(".create_form_background").css("display", "block");
     
-                // Populate book dropdown
                 $.get(bookUrl)
                 .done(function(bookData) {
                     $('#book_select').empty().append('<option value="">-- Select a book --</option>');
@@ -654,7 +642,6 @@ $(document).ready(function() {
                 })
                 .fail(console.error);
     
-                // Populate user dropdown
                 $.get(userUrl)
                 .done(function(userData) {
                     $('#user_select').empty().append('<option value="">-- Select a user --</option>');
@@ -716,12 +703,11 @@ $(document).ready(function() {
     
                 $('#create_form').append(editReviewHtml);
     
-                // Cancel button handler
                 $(document).off('click', '#cancel_edit').on('click', '#cancel_edit', function() {
+                    console.log("Cancel Edit from registered!");
                     $('.create_form_background').css("display", "none");
                 });
     
-                // Confirm button handler
                 $(document).off('click', '#confirm_edit').on('click', '#confirm_edit', function() {
                     const updateData = {
                         bookId: $('#book_select').val(),

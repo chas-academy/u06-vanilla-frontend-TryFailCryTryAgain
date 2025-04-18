@@ -560,5 +560,85 @@ body {
                 width: 100%;
             }
         }
+
+        .create_form_background {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    
+        .create_form {
+            width: 95% !important;
+            height: auto !important;
+            max-height: 90vh;
+            overflow-y: auto;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
+        }
+    
+        .edit_form_container {
+            width: 100% !important;
+            padding: 15px !important;
+        }
+    
+        .form_field {
+            flex-direction: column !important;
+        }
+    
+        .input_group {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+    
+        .form_actions {
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .confirm_button, 
+        .cancel_button {
+            width: 100%;
+        }
+    
+        /* Specific adjustments for different form types */
+        .item_list {
+            max-height: 100px;
+            overflow-y: auto;
+        }
+    
+        /* Adjust form controls */
+        .form_control {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+        /* Adjust textareas */
+        textarea.form_control {
+            min-height: 80px;
+        }
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .edit_form_container {
+        padding: 10px !important;
+    }
+
+    .section_title {
+        font-size: 1.2rem !important;
+    }
+
+    .field_label {
+        font-size: 0.9rem;
+    }
+
+    .form_control {
+        padding: 6px !important;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem !important;
+        padding: 6px 12px !important;
     }
 }

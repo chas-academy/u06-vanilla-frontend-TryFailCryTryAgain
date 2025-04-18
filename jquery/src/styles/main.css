@@ -639,6 +639,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .main_content {
+    /* Specific adjustments for different form types */
+    /* Adjust form controls */
+    /* Adjust textareas */
+  }
   .main_content .section_container {
     display: flex;
     flex-direction: column;
@@ -650,5 +655,67 @@ body {
   .main_content .section_container .display_orders, .main_content .section_container .display_books, .main_content .section_container .display_reviews, .main_content .section_container .display_users {
     height: 300px;
     width: 100%;
+  }
+  .main_content .create_form_background {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .main_content .create_form {
+    width: 95% !important;
+    height: auto !important;
+    max-height: 90vh;
+    overflow-y: auto;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .main_content .edit_form_container {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .main_content .form_field {
+    flex-direction: column !important;
+  }
+  .main_content .input_group {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .main_content .form_actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main_content .confirm_button,
+  .main_content .cancel_button {
+    width: 100%;
+  }
+  .main_content .item_list {
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  .main_content .form_control {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .main_content textarea.form_control {
+    min-height: 80px;
+  }
+}
+/* For very small screens */
+@media (max-width: 480px) {
+  .edit_form_container {
+    padding: 10px !important;
+  }
+  .section_title {
+    font-size: 1.2rem !important;
+  }
+  .field_label {
+    font-size: 0.9rem;
+  }
+  .form_control {
+    padding: 6px !important;
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 0.9rem !important;
+    padding: 6px 12px !important;
   }
 }/*# sourceMappingURL=main.css.map */
