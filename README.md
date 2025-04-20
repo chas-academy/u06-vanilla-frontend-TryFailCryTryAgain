@@ -39,3 +39,10 @@ Convert the .ts files into .js so it can run
 npm run build
 ~~~
 Then navigate to your index.html file and start your local host server
+
+
+### Figma Sketches at the start
+![Sketch](Figma\Sketch1.png)
+![Sketch](Figma\Sketch2.png)
+![Sketch](Figma\Sketch3.png)
+![Sketch](Figma\Sketch4.png)
