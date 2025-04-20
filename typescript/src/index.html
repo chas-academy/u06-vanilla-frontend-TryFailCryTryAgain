@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>u06 - Structure</title>
+        <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+    <header class="navbar">
+        <nav class="nav-list">
+            <div class="logo">Book Store</div>
+        </nav>
+    </header>
+
+    <main class="main_content">
+
+        <section class="create_form_background">
+            <div class="create_form" id="create_form">
+
+            </div>
+        </section>
+
+        <div class="section_container">
+            <section class="display_orders">
+                <div class="title"><h3>Orders</h3><button id="create_order">+</button></div>
+                <div class="placed_orders">
+                    <div class="order_container" id="order_container">
+                        <div class="order_info">
+                            <p><strong>Order ID: </strong>123</p>
+                            <p><strong>User ID: </strong>123</p>
+                            <p><strong>Book IDs: </strong>123</p>
+                            <p><strong>Order Date: </strong>123</p>
+                            <p><strong>Status: </strong>123</p>
+                            <p><strong>Total Amount: </strong>123</p>
+                        </div>
+                        <div class="order_button">
+                            <button id="order_edit" class="order_edit">Edit</button>
+                            <button id="order_delete" class="order_delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </section>
+
+            <section class="display_books">
+                <div class="title"><h3>Books</h3><button id="create_book">+</button></div>
+                <div class="book_collection">
+                    <div class="book_container" id="book_container">
+                        <div class="book_info">
+                            <p><strong>Order ID: </strong>123</p>
+                            <p><strong>User ID: </strong>123</p>
+                            <p><strong>Book IDs: </strong>123</p>
+                            <p><strong>Order Date: </strong>123</p>
+                            <p><strong>Status: </strong>123</p>
+                            <p><strong>Total Amount: </strong>123</p>
+                        </div>
+                        <div class="book_button">
+                            <button id="book_edit" class="book_edit">Edit</button>
+                            <button id="book_delete" class="book_delete">Delete</button>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+
+            <section class="display_reviews">
+                <div class="title"><h3>Reviews</h3><button id="create_review">+</button></div>
+                <div class="review_collection">
+                    <div class="review_container" id="review_container">
+                        <div class="review_info">
+                            <p><strong>Order ID: </strong>123</p>
+                            <p><strong>User ID: </strong>123</p>
+                            <p><strong>review IDs: </strong>123</p>
+                            <p><strong>Order Date: </strong>123</p>
+                            <p><strong>Status: </strong>123</p>
+                            <p><strong>Total Amount: </strong>123</p>
+                        </div>
+                        <div class="review_button">
+                            <button id="review_edit" class="review_edit">Edit</button>
+                            <button id="review_delete" class="review_delete">Delete</button>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+
+            <section class="display_users">
+                <div class="title"><h3>Users</h3><button id="create_user">+</button></div>
+                <div class="users_collection">
+                    <div class="users_container" id="users_container">
+                        <div class="users_info">
+                            <p><strong>Order ID: </strong>123</p>
+                            <p><strong>User ID: </strong>123</p>
+                            <p><strong>users IDs: </strong>123</p>
+                            <p><strong>Order Date: </strong>123</p>
+                            <p><strong>Status: </strong>123</p>
+                            <p><strong>Total Amount: </strong>123</p>
+                        </div>
+                        <div class="users_button">
+                            <button id="users_edit" class="users_edit">Edit</button>
+                            <button id="users_delete" class="users_delete">Delete</button>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 David Segerbo</p>
+    </footer>
+    <script type="module" src="../dist/script.js" defer></script>
+</body>
+</html>
